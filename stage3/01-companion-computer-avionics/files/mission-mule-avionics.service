@@ -1,0 +1,11 @@
+[Unit]
+Description=Data mule companion computer avionics
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /opt/mission-mule/data-mule/app.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

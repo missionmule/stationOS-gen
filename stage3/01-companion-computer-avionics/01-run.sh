@@ -9,10 +9,10 @@ cd /opt/mission-mule && git clone -v https://github.com/missionmule/data-mule.gi
 
 EOF
 
-install -m 644 files/mission-mule-avionics.service   ${ROOTFS_DIR}/lib/systemd/system/
+install -m 644 files/mission-mule-avionics.service   ${ROOTFS_DIR}/lib/systemd/system/mission-mule-avionics.service
 
 on_chroot << EOF
 
-systemctl enable mission-mule-avionics
+systemctl enable mission-mule-avionics.service
 
 EOF

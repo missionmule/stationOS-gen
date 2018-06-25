@@ -33,7 +33,7 @@ install -m 755 -v files/hostapd "${ROOTFS_DIR}/etc/default/"
 echo "Installing sysctl.conf"
 install -m 644 -v files/sysctl.conf "${ROOTFS_DIR}/etc/"
 
-echo "Wiress access point configuration complete"
+echo "Wireless access point configuration complete"
 
 on_chroot << EOF
 

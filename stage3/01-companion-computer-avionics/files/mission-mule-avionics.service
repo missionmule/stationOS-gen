@@ -4,7 +4,7 @@ After=multi-user.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/python /opt/mission-mule/data-mule/app.py /opt/mission-mule/data-mule/waypoints/data_stations_abu_dhabi.csv /opt/mission-mule/data-mule/waypoints/landing_abu_dhabi.csv
+ExecStart=/usr/bin/python3 /opt/mission-mule/firefly-mule/avionics
 Restart=on-failure
 
 [Install]

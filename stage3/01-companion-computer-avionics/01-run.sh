@@ -5,7 +5,7 @@ on_chroot << EOF
 rm -rf /opt/mission-mule
 mkdir -p /opt/mission-mule
 
-cd /opt/mission-mule && git clone -v https://github.com/missionmule/data-mule.git
+cd /opt/mission-mule && git clone -v https://github.com/missionmule/firefly-mule.git
 
 EOF
 

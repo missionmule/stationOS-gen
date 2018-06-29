@@ -2,10 +2,10 @@
 
 on_chroot << EOF
 
-pip install lxml
-pip install paramiko
-pip install pymavlink
-pip install pyserial
-pip install dronekit
+pip3 install lxml
+pip3 install paramiko
+pip3 install pymavlink
+pip3 install pyserial
+pip3 install dronekit
 
 EOF

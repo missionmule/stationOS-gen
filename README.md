@@ -1,6 +1,8 @@
 # muleOS-gen
 
-_Tool used to create the raspberrypi.org Raspbian images_
+_Tool used to create muleOS image for Data Mule companion computer_
+
+`muleOS-gen` is based on `pi-gen` which is used to build Raspbian images.
 
 ## muleOS Image
 

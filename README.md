@@ -1,7 +1,22 @@
-# pi-gen
+# muleOS-gen
 
 _Tool used to create the raspberrypi.org Raspbian images_
 
+## muleOS Image
+
+The image built by this repository is a clean image of the Mission Mule UAV companion computer firmware. The image is designed for Raspberry Pi boards, but is likely to work on other debian-based systems.
+
+## Building
+
+To build the image, run the following command. It's important to build on the target architecture since x86 builds are incompatible with ARM architecture and vice versa. For example, if this the image is supposed to run on a Raspberry Pi 3, build the image on a Raspberry Pi 3. In theory, you can use QEMU to emulate ARM architecture but the marginal benefit is minimal over simply building on a Raspberry Pi.
+
+```
+git clone https://github.com/missionmule/muleOS-gen/
+cd muleOS-gen
+sudo ./build.sh
+```
+
+Be patient, this will take some time.
 
 ## Dependencies
 

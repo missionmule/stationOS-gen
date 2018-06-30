@@ -25,3 +25,10 @@ echo "Installing sysctl.conf"
 install -m 644 -v files/sysctl.conf "${ROOTFS_DIR}/etc/"
 
 echo "Wireless access point configuration complete"
+
+on_chroot << EOF
+
+iptables -t nat -A  POSTROUTING -o eth0 -j MASQUERADE
+sh -c "iptables-save > /etc/iptables.ipv4.nat"
+
+EOF

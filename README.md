@@ -15,7 +15,8 @@ To build the image, run the following command. It's important to build on the ta
 ```
 git clone https://github.com/missionmule/muleOS-gen/
 cd muleOS-gen
-sudo ./build.sh
+sudo chmod +x ./pre-build.sh
+sudo ./pre-build.sh && sudo ./build.sh
 ```
 
 Be patient, this will take some time.

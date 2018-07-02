@@ -16,5 +16,6 @@ install -m 644 files/mission-mule-avionics.service   "${ROOTFS_DIR}/lib/systemd/
 on_chroot << EOF
 
 systemctl enable mission-mule-avionics
+systemctl disable hciuart
 
 EOF

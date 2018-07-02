@@ -54,3 +54,6 @@
 
 # Enable audio (loads snd_bcm2835)
 dtparam=audio=on
+
+# Disable Bluetooth
+dtoverlay=pi3-disable-bt

@@ -19,4 +19,26 @@ fi
 
 iptables-restore < /etc/iptables.ipv4.nat
 
+# Run unique SSID setup on first boot only
+FLAG="/var/log/firstboot.log"
+if [ ! -f $FLAG ]; then
+   #Put here your initialization sentences
+   echo "Generating unique wireless SSID for access point"
+
+   # Remove generic `ssid=MissionMule` line from hostapd.conf
+   sed -i.bak '/ssid=MissionMule/d' /etc/hostapd/hostapd.conf
+
+   # Generate unique 4 character ID
+   _UUID=$(/usr/bin/python3 /opt/unique_ssid.py)
+
+   # Append ID to end of hostapd.conf
+   echo "ssid=MissionMule-$_UUID" >> /etc/hostapd/hostapd.conf
+
+   # Print out Wi-Fi SSID to look for
+   echo "Wi-Fi SSID: MissionMule-$_UUID"
+
+   # Don't run after the first boot
+   touch $FLAG
+fi
+
 exit 0

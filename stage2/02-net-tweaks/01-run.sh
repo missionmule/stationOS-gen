@@ -24,6 +24,9 @@ install -m 755 -v files/hostapd "${ROOTFS_DIR}/etc/default/"
 echo "Installing sysctl.conf"
 install -m 644 -v files/sysctl.conf "${ROOTFS_DIR}/etc/"
 
+echo "Installing unique UUID script"
+install -m 755 -v files/unique_ssid.py "${ROOTFS_DIR}/opt/"
+
 echo "Wireless access point configuration complete"
 
 on_chroot << EOF

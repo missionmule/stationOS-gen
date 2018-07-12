@@ -1,0 +1,3 @@
+# Force onboard WiFi interface to use wlan1 and allow wlan0 for USB WiFi chip
+
+ACTION=="add", SUBSYSTEM=="net", DRIVERS=="brcmfmac", NAME="wlan1"

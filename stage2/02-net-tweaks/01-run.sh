@@ -27,6 +27,9 @@ install -m 644 -v files/sysctl.conf "${ROOTFS_DIR}/etc/"
 echo "Installing unique UUID script"
 install -m 755 -v files/unique_ssid.py "${ROOTFS_DIR}/opt/"
 
+echo "Installing 72-wlan-geo-dependent.rules"
+install -m 644 -v files/72-wlan-geo-dependent.rules "${ROOTFS_DIR}/etc/udev/rules.d/"
+
 echo "Wireless access point configuration complete"
 
 on_chroot << EOF

@@ -1,10 +1,10 @@
-# muleOS-gen
+# stationOS-gen
 
-_Tool used to create muleOS image for Data Mule companion computer_
+_Tool used to create stationOS image for Data Mule companion computer_
 
-`muleOS-gen` is based on `pi-gen` which is used to build Raspbian images.
+`stationOS-gen` is based on `pi-gen` which is used to build Raspbian images.
 
-## muleOS Image
+## stationOS Image
 
 The image built by this repository is a clean image of the Mission Mule UAV companion computer firmware. The image is designed for Raspberry Pi boards, but is likely to work on other debian-based systems.
 
@@ -13,8 +13,8 @@ The image built by this repository is a clean image of the Mission Mule UAV comp
 To build the image, run the following command. It's important to build on the target architecture since x86 builds are incompatible with ARM architecture and vice versa. For example, if this the image is supposed to run on a Raspberry Pi 3, build the image on a Raspberry Pi 3. In theory, you can use QEMU to emulate ARM architecture but the marginal benefit is minimal over simply building on a Raspberry Pi.
 
 ```
-git clone https://github.com/missionmule/muleOS-gen/
-cd muleOS-gen
+git clone https://github.com/missionmule/stationOS-gen/
+cd stationOS-gen
 sudo chmod +x ./pre-build.sh
 sudo ./pre-build.sh && sudo ./build.sh
 ```

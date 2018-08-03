@@ -1,0 +1,11 @@
+[Unit]
+Description=Data station onboard computer power management
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/mission-mule/data-station/Onboard-Computer/power-management/power-management.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

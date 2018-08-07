@@ -16,3 +16,11 @@
 #
 # install -m 644 files/systemd-udevd.service   "${ROOTFS_DIR}/lib/systemd/system/"
 # install -m 644 files/usbmount.conf  "${ROOTFS_DIR}/etc/usbmount/"
+
+
+on_chroot << EOF
+
+chown -R pi:pi /media
+chmod -R 777 /media
+
+EOF
